@@ -18,29 +18,25 @@ public class Ex19 {
 			
 			switch(select) {
 			case 1:
-				System.out.print("예금액>");
-				int deposit = sc.nextInt();
-				accountmoney=accountmoney + deposit;
+				System.out.print("예금액> ");
+				accountmoney += sc.nextInt();
 				break;
 			case 2:
-				System.out.print("출금액>");
-				int withdraw = sc.nextInt();
-				accountmoney=accountmoney - withdraw;
+				System.out.print("출금액> ");
+				accountmoney -=sc.nextInt();
 				break;
 			case 3:
-				System.out.print("잔고액>");
-				int balance = sc.nextInt(accountmoney);
+				System.out.println("잔고액> "+accountmoney);
 				break;
 			case 4:
-				System.out.print("프로그램 종료");
+				System.out.println("프로그램 종료");
+				System.out.println();
 				flag = false;
 				break;
-				
 			default:
-				System.out.print("다시입력해주세요");
-				break;
+				System.out.println("다시 입력해주세요.");
+				
 			}
-			System.out.println();
 		}
 			
 		sc.close();
